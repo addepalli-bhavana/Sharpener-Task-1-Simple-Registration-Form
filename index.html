@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Book A Call</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Book a call</h1>
+        <span
+          >Book a call slot and our representative will call you within 1hr of
+          selected time.</span
+        >
+        <div class="divider"></div>
+      </div>
+      <form id="book-a-call-form">
+        <label for="name">Name:</label><br />
+        <input type="text" name="name" id="name" /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" id="email" /><br />
+
+        <label for="phn-no">Phone:</label><br />
+        <input type="text" name="phn-no" id="phn-no" /><br />
+
+        <div class="timings">
+          <label for="timing">Time for Call:</label><br />
+          <div class="timing">
+            <input type="date" name="date" id="date-timing" />
+            <input type="time" name="time" id="time-timing" />
+          </div>
+        </div>
+
+        <button type="button" class="btn">GET A CALL</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementsByClassName("btn")[0]
+        .addEventListener("click", () => {
+          if (
+            document.getElementById("name").value == "" ||
+            document.getElementById("email").value == "" ||
+            document.getElementById("phn-no").value == "" ||
+            document.getElementById("date-timing").value == "" ||
+            document.getElementById("time-timing").value == ""
+          ) {
+            alert("Please fill all the details");
+          } else {
+            console.log(
+              "User Name is " + document.getElementById("name").value
+            );
+            console.log(
+              "User Email id is " + document.getElementById("email").value
+            );
+            console.log(
+              "User Phone Number is " + document.getElementById("phn-no").value
+            );
+            console.log(
+              "User call timings are " +
+                document.getElementById("date-timing").value +
+                " " +
+                document.getElementById("time-timing").value
+            );
+          }
+        });
+    </script>
+  </body>
+</html>
